@@ -195,10 +195,10 @@ function BulletThrow() {
         });
 
         limitBullet = limitBullet - 1;
-        bulletNum.t
-        extContent = limitBullet;
 
+        bulletNum.textContent = limitBullet;
     }
+
 }
 
 
