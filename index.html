@@ -7,20 +7,34 @@
     </head>
     <body>
         <div class="canvas-wrapper">
-            <div class="bullet-info"> 
-                گلوله های باقی مانده: 
-                <span id="bullet">30</span>
+            <div class="bullet-info">
+                <div>
+                    گلوله های باقی مانده:
+                    <span id="bullet">30</span>
+
+                </div>
+                <div>
+                    سوخت باقی مانده :
+                    <span id="oil">10</span>
+                </div>
+                <div class="win-time">
+
+                    مانده تا پیروزی شما :
+                    <span id="time">30</span>
+
+                </div>
             </div>
 
             <canvas id="gameCanvas"></canvas>
         </div>
+
+
         <div class="buttons">
             <button id="start"> شروع بازی </button>
             <button id="refresh"> اتمام بازی</button>
-
         </div>
-        
-        
+
+
         <script src="./JS/app.js"></script>
     </body>
 </html>
