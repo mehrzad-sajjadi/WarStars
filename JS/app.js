@@ -25,6 +25,11 @@ start.addEventListener("click", () => {
             location.reload();
         }
         oilNum.textContent = limitOil;
+        if(limitOil<=5){
+            oilNum.style.backgroundColor="Yellow";
+            oilNum.style.color="Black";
+
+        }
     }, 1000);
 
     //زمان پیروزی
