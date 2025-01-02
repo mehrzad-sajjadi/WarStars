@@ -37,15 +37,31 @@ function animate(){
 
     //  تیر و حرکت آن
     ctx.fillStyle = "blue";
-    for(let i = bullets.length-1; i>0 ; i--){
+    for (let i = bullets.length - 1; i >= 0; i--) {
         let b = bullets[i];
         ctx.fillRect(b.x, b.y, b.width, b.height);
+        
+        
+        b.y = b.y - 5;
+
+        if (b.y + b.height < 0) {
+            bullets.splice(i, 1);
+        }
     }
-
-
 }
 
 
+function BulletThrow(){
+    let bulletX = planeX+30  ;
+    let bulletY = planeY-30;
+
+    bullets.push({
+        x : bulletX ,
+        y : bulletY ,
+        width : 2,
+        height : 25 
+    });
+}
 
 
 
@@ -77,21 +93,12 @@ document.addEventListener("keydown", (event) => {
     console.log( planeX + planeWidth);
 
 
-    if(event.key=="space"){
+    if(event.key == "ArrowUp"){
         BulletThrow();
     }
-
-
-
-
-
-
-
-
-
-
-
     
-    // پس از تغییر مختصات، دوباره همه‌چیز را رسم می‌کنیم
-    drawAll();
 });
+
+
+
+
