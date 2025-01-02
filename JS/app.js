@@ -28,7 +28,7 @@ let bullets = [];
 
 function animate() {
     requestAnimationFrame(animate);
-    //جلوگیری از تکرار اشیا بازی در هنگام حرکت
+    //جلوگیری از تکرار شخصیتها بازی در هنگام حرکت
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     ctx.drawImage(planeImg, planeX, planeY, planeWidth, planeHeight);
@@ -71,8 +71,11 @@ function BulletThrow() {
         bulletNum.textContent = limitBullet;     
     }
 }
+
+
+
 document.addEventListener("keydown", (event) => {
-    const step = 10; // مقدار جابه‌جایی در هر بار فشردن کلید
+    const step = 10; // گام های جابجایی
     if (event.key == "ArrowLeft") {
         planeX = planeX - step;
     } else if (event.key == "ArrowRight") {

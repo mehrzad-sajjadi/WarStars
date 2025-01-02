@@ -1,7 +1,11 @@
+@font-face { 
+    font-family: "IRANSans"; src: url("../fonts/IRANSans-web.woff") format("woff"); 
+}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "IRANSans"; 
 }
 body {
     background-color: #000;
@@ -26,4 +30,16 @@ button {
     margin-top: 20px;
     padding: 8px 16px;
     cursor: pointer;
+    
 }
+button {
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 16px;
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    
+}
+  
